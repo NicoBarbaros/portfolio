@@ -27,6 +27,7 @@ const common = {
 
   resolve: {
     extensions: ['.js', '.jsx'] //the extensions to resolve
+
   }
 };
 

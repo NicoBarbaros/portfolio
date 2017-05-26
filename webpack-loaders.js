@@ -26,7 +26,7 @@ exports.devServer = function(options) {
 // the css loader
 exports.css = {
   test: /\.css$/,
-  loaders: ['style-loader', 'css-loader'],
+  loaders: ['style-loader', 'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'],
   include: PATHS.css
 }
 // The file loader
