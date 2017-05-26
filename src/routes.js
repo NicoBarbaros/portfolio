@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { About, Contact, Home, Welcome, } from './components';
-import Navigation from './components/Navigation/index';
+import Header from './components/Header/index';
+import Footer from './components/Footer/index';
 
 const Routes = (
 	<Router>
 		<div className='container'>
-			<Navigation/>
+			<Header/>
 			<Switch>
 				<Route exact path='/' component={Home}/>
 				<Route exact path='/about' component={About}/>
@@ -15,6 +16,7 @@ const Routes = (
 					return <p> 404 Page </p>
 				}} />
 			</Switch>
+			<Footer/>
 		</div>
   </Router>
 );

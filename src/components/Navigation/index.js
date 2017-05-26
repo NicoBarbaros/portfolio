@@ -7,26 +7,23 @@ import style from './style.css';
 class Navigation extends Component {
 	render () {
 		return (
-			<ul className='nav'>
-				<li>
-					<NavLink exact activeClassName={style.active} to='/'>
-						Home
-					</NavLink>
-				</li>
-				<li>
-					<NavLink activeClassName={style.active} to='/about' >
-						About
-					</NavLink>
-				</li>
-				<li>
-					<NavLink activeClassName={style.active} to='/contact' >
-						Contact
-					</NavLink>
-				</li>
-			</ul>
+			<nav ref="nav" id="nav">
+				<ul className='nav'>
+					<li>
+						<NavLink activeClassName={style.active} to='/about' >
+							About
+						</NavLink>
+					</li>
+					<li>
+						<NavLink activeClassName={style.active} to='/contact' >
+							Contact
+						</NavLink>
+					</li>
+				</ul>
+			</nav>
 		)
 	}
 }
 
-export default Navigation
+export default Navigation;
 

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Links extends PureComponent {
 
@@ -25,4 +26,7 @@ class Links extends PureComponent {
 	}
 }
 
+Links.propTypes = {
+	links: PropTypes.array.isRequired
+}
 export default Links;

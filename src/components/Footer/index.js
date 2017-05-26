@@ -1,22 +1,26 @@
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 import Links from '../Links/index';
 import style from './style.css';
 
-import weekday from '../../utils/weekday';
+import weekDay from '../../utils/weekday';
 import {footerLinks as links} from '../../utils/data';
+import getUniquerWord from '../../utils/words';
 
 class Footer extends Component {
 
-
 	render () {
 		return (
-			<div>
-			<p>Have a nice {weekday()}</p>
-			<Links links={links}/>
-			</div>
+			<footer className={style.footer}>
+				<p>Enjoy {getUniquerWord()} {weekDay()}</p>
+				<Links links={links}/>
+			</footer>
 		)
 	}
+}
+
+Footer.protoTypes = {
+	links: PropTypes.array.isRequired
 }
 
 export default Footer
