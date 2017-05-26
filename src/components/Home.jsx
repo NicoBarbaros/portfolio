@@ -9,7 +9,7 @@ export default class Home extends PureComponent {
 
     return (
       <div class="main">
-        <Navigation location={location}/>
+        <Navigation/>
         {this.props.children}
         <Footer/>
       </div>

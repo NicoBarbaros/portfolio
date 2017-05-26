@@ -1,15 +1,18 @@
 import React from 'react';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { About, Contact, Home, Welcome, } from './components';
 
-const routes = (
-	<Router history={hashHistory}>
-		<Route path="/" component={Home}>
-			<IndexRoute component={Welcome} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
-		 </Route>
+const Routes = (
+	<Router>
+		<Switch>
+			<Route exact path='/' component={Home}/>
+			<Route exact path='/about' component={About}/>
+			<Route exact path='/contact' component={Contact}/>
+			<Route render={function () {
+				return <p> 404 Page </p>
+			}} />
+		</Switch>
   </Router>
 );
 
-export default routes;
+export default Routes;
