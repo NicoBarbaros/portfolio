@@ -3,7 +3,7 @@
 var words = require('./words.json');
 import uniqueRandomArray from 'unique-random-array';
 
-const getUniquerWord = () => {
+const getUniqueWord = () => {
 
 	var word = uniqueRandomArray(words);
 	var firstChar = word().substring(0, 1);
@@ -15,4 +15,4 @@ const getUniquerWord = () => {
 	return 'a ' + word();
 }
 
-export default getUniquerWord;
+export default getUniqueWord;

@@ -15,6 +15,11 @@ class Navigation extends Component {
 						</NavLink>
 					</li>
 					<li>
+						<NavLink exact activeClassName={style.active} to='/work'>
+							Work
+						</NavLink>
+					</li>
+					<li>
 						<NavLink activeClassName={style.active} to='/contact' >
 							Contact
 						</NavLink>

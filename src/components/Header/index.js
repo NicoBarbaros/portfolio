@@ -11,7 +11,7 @@ class Header extends Component {
 		return (
 				<header class={style.header}>
 					<div class={style.logo}>
-						<Link to="/">Nicholas Barbaros</Link>
+						<Link to="/">Logo</Link>
 					</div>
 					<Navigation class={style.nav} />
 				</header>
