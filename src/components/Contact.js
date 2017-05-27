@@ -1,10 +1,13 @@
 import React, { PureComponent } from 'react';
 
+import Text from '../containers/Text/index'
+import { contact } from '../utils/data';
 
-export default class Contact extends PureComponent {
-  render () {
-    return (
-      <h1> Contact page</h1>
-    );
-  }
-}
+const Contact = () => (
+  <section>
+    <Text data={contact}/>
+  </section>
+);
+
+export default Contact;
+

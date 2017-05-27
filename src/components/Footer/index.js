@@ -5,7 +5,7 @@ import style from './style.css';
 import {withRouter} from 'react-router-dom';
 
 import weekDay from '../../utils/weekday';
-import {footerLinks as links} from '../../utils/data';
+import {footer as links} from '../../utils/data';
 import getUniqueWord from '../../utils/words';
 
 class Footer extends Component {
