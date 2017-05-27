@@ -7,7 +7,6 @@ class Text extends Component {
 				if(this.refs.section) {
 						let links = this.refs.section.querySelectorAll('a');
 
-						console.log(links);
 						for(let i = 0; i < links.length; i++) {
 								links[i].addEventListener('mouseover', this.handleMouseOver);
 						}
