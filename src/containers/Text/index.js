@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import style from './style.css';
+import React, {Component} from 'react';
 
 class Text extends Component {
-		render() {
-				return (
-						<p>{this.props}</p>
-				)
-		}
+	render () {
+		return (
+			<p>Text</>
+		)
+	}
 }
 
 export default Text;
