@@ -2,6 +2,7 @@
 
 const webpack = require('webpack');
 const PATHS = require('./webpack-paths');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.devServer = function(options) {
 	return {
@@ -16,6 +17,7 @@ exports.devServer = function(options) {
 		},
 
 		plugins: [
+			new ExtractTextPlugin("style.css"),
 			new webpack.HotModuleReplacementPlugin({
 				multistep: true
 			})
@@ -27,13 +29,44 @@ exports.devServer = function(options) {
 exports.css = {
   test: /\.css$/,
   loaders: ['style-loader', 'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'],
-  include: PATHS.css
 }
+
+
+exports.scss = {
+		test: /\.scss$/,
+		loaders: ['style-loader', 'css-loader?modules&importLoader=2&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader' ]
+}
+// // Scss Loader
+// exports.scss = {
+//
+// 	test: /\.scss$/,
+// 		exclude: /node_modules/,
+// 	use: ExtractTextPlugin.extract({
+// 		fallback: 'style-loader',
+//
+// 		// Could also be write as follow:
+// 		// use: 'css-loader?modules&importLoader=2&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
+// 		use: [
+// 			{
+// 				loader: 'css-loader',
+// 				query: {
+// 					modules: true,
+// 					sourceMap: true,
+// 					importLoaders: 2,
+// 					localIdentName: '[name]__[local]___[hash:base64:5]'
+// 				}
+// 			},
+// 			'sass-loader'
+// 		]
+// 	}),
+// }
+
 // The file loader
 exports.font = {
   test: /\.ttf$/,
   loaders: ['file-loader']
 }
+
 // Babel loader
 exports.babel = {
   test: /\.jsx?$/,
@@ -44,3 +77,4 @@ exports.babel = {
     plugins: ['react-html-attrs', 'transform-decorators-legacy', 'transform-class-properties'],
   }
 };
+

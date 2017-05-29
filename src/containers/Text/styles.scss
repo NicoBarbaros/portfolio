@@ -1,0 +1,8 @@
+@import '../../assets/stylesheets/helpers/global';
+
+.yellow {
+  background-color: $primary-color;
+  width: 100%;
+  min-width: 800px;
+  position: fixed;
+}

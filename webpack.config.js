@@ -1,7 +1,7 @@
 "use strict"
 
 const merge = require('webpack-merge');
-const validate = require('webpack-validator');
+//const validate = require('webpack-validator');
 
 const PATHS = require('./webpack-paths');
 const loaders = require('./webpack-loaders');
@@ -21,6 +21,7 @@ const common = {
     loaders: [
       loaders.babel, // Transpiler
       loaders.css, // Our bundle will contain the css
+      loaders.scss,
       loaders.font, //Load fonts
     ]
   },
@@ -52,4 +53,4 @@ switch(process.env.NODE_ENV) {
   break;
 }
 
-module.exports = validate(config);
+module.exports = config;
