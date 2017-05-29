@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Header from '../../components/Header/index';
 import Footer from '../../components/Footer/index';
-import { About, Contact, Home, Work, } from '../../components/index';
+import { About, Contact, Home, Work, } from '../Pages/index';
 
 class Page extends Component {
 	render () {
@@ -22,8 +22,10 @@ class Page extends Component {
 		return (
 			<div>
 				<Header/>
-				{content}
-				<Footer/>
+				<div className='main--content'>
+					{content}
+					<Footer/>
+				</div>
 			</div>
 		)
 	}

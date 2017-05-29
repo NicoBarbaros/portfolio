@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
-import Text from '../containers/Text/index'
-import { contact } from '../utils/data';
+import Text from '../Text/index'
+import { contact } from '../../utils/data';
 
 const Contact = () => (
   <section>

@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 
-import Banner from './Banner/index';
-import Title from './Title/index';
-import Text from '../containers/Text/index';
+import Banner from '../../components//Banner/index';
+import Title from '../../components/Title/index';
+import Text from '../Text/index';
 
-import { home, homeTitle } from '../utils/data';
+import { home, homeTitle } from '../../utils/data';
 
 const Home = () => (
   <div>

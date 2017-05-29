@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 
+import styles from './styles.scss';
+
 class Text extends Component {
 
 		componentDidMount () {
@@ -27,8 +29,9 @@ class Text extends Component {
 						</div>
 				);
 
+				console.log(JSON.stringify(styles))
 				return (
-						<section ref="section">
+						<section ref="section" className={styles.yellow}>
 								{dataItems}
 						</section>
 				)
