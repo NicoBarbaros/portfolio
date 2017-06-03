@@ -1,0 +1,20 @@
+.pageWrapper {
+  margin-top: 50vh;
+
+  font-size: 30px;
+  color: $primary-color;
+}
+
+.mainContainer {
+  max-width: 1400px;
+  @include push--auto;
+}
+
+.shortContainer {
+
+
+}
+
+section {
+  @include margin--mixin($top: rem($section-margin), $bottom: rem($section-margin));
+}

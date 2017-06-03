@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 
+import classnames from 'classnames';
 import style from '../../assets/stylesheets/base.scss';
 
 class Text extends Component {
@@ -22,15 +23,15 @@ class Text extends Component {
 
 		render () {
 				const {data} = this.props;
-
+				console.log(data)
 				const dataItems = data.map((element, index) =>
-						<div key={index.toString()}>
+						<div key={index.toString()} class={classnames(style.text, style.textParagraph)}>
 								{element}
 						</div>
 				);
 
 				return (
-						<section ref="section" className={style.yellow}>
+						<section ref="section" className={style.mainContainer}>
 								{dataItems}
 						</section>
 				)

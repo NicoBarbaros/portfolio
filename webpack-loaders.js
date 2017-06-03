@@ -36,6 +36,16 @@ exports.scss = {
 		test: /\.scss$/,
 		loaders: ['style-loader', 'css-loader?modules&importLoader=2&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader' ]
 }
+
+// exports.scss =  {
+// 		test: /\.scss$/,
+// 		use: [
+// 				{ loader: "style-loader" },
+// 				{ loader: "css-loader" },
+// 				{ loader: "sass-loader" }
+// 		]
+// },
+
 // // Scss Loader
 // exports.scss = {
 //

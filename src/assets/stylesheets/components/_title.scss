@@ -1,0 +1,15 @@
+//@mixin font--source($size: false, $colour: false, $weight: false,  $lh: false) {
+.title {
+  @include font--source($size: em(60, 30), $colour: $accent-color, $weight: 800 );
+  @include margin--mixin($bottom: rem(16));
+}
+
+.subtitle {
+  @include font--source($size: em(24, 30), $weight: 300 );
+  font-family: 'Space Mono', monospace;
+
+  .subtitleText:not(:last-of-type) {
+    @include margin--mixin($right: rem(15));
+  }
+}
+

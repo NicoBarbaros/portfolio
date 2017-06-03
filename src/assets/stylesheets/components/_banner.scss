@@ -1,0 +1,15 @@
+.banner {
+  position: fixed;
+  width: calc(100% - 50px);
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transition: opacity 170ms ease-out-quint, top 170ms ease-out-quint, transform 170ms ease-out-quint;
+  will-change: opacity, top, -webkit-transform, transform;
+
+  backface-visibility: hidden;
+  //opacity: 0;
+}

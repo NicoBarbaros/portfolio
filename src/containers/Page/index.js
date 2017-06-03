@@ -4,6 +4,11 @@ import Header from '../../components/Header/index';
 import Footer from '../../components/Footer/index';
 import { About, Contact, Home, Work, } from '../Pages/index';
 
+import classnames from 'classnames';
+
+
+import style from '../../assets/stylesheets/base.scss';
+
 class Page extends Component {
 	render () {
 		let pathname = this.props.location.pathname;
@@ -20,12 +25,10 @@ class Page extends Component {
 		}
 
 		return (
-			<div>
-				<Header/>
-				<div className='main--content'>
+			<div className= {style.wrapper}>
+					<Header/>
 					{content}
 					<Footer/>
-				</div>
 			</div>
 		)
 	}

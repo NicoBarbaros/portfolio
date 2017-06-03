@@ -57,7 +57,7 @@ $breakpoints: (
 }
 
 @mixin font--source($size: false, $colour: false, $weight: false,  $lh: false) {
-  font-family: $roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
   @if $size { font-size: $size; }
   @if $colour { color: $colour; }
   @if $weight { font-weight: $weight; }

@@ -1,0 +1,26 @@
+
+.line {
+  @include pseudo($pos: fixed);
+  background: $line-background;
+  z-index: z('lines');
+
+  width: 100%;
+  height: 25px;
+}
+
+.wrapper{
+  @include padding--mixin($left: 25px, $right: 25px);
+
+  &:before,
+  &:after {
+    @extend .line;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:before {
+    top: 0;
+  }
+}

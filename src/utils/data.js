@@ -16,30 +16,30 @@ const footer = [
 
 // Static text for Home page
 const home = [
-	<p>Hey, I am Nicholas<br/> Frontend Developer<br/> based in Chisinau Moldova</p>,
+	<p>Hey, I am <strong>Nicholas</strong><br/> Frontend Developer<br/> based in <strong>Chisinau Moldova</strong></p>,
 	<p>You are currently <br/> looking at <strong> my site</strong><br/> that is awesome.</p>,
 	<p>This site uses React
 		<br/>and something<br/>
 		as content manager<br/>
 		and some other stuff<br/>
-		<em>react-router, babel, webpack, css-modules JSX es6</em>
+		<em>react-router, babel, webpack, css-modules, jsx, es6, scss</em>
 	</p>,
-	<p>Pretty cool, right?<br/>
+	<p>Breathtaking, right?<br/>
 		Drop me a line at<br/>
 		<a href="mailto:nicholas.barbaros@gmail.com?Subject=Cheers" data-text="nicholas.barbaros@gmail.com">nicholas.barbaros@gmail.com</a>
 	</p>
 ]
 
 const homeTitle = {
-	'title': 'Nicholas Barbaros',
+	'title': 'Nicholas Barbaroș',
 	'qualities': [
 		'Developer',
 		'Frontend',
 		'Traveler',
-		'Tea lover',
-		'Cocoa lover',
-		'Books lover',
-		'Adventurer'
+		// 'Tea lover',
+		// 'Cocoa lover',
+		// 'Books lover',
+		// 'Adventurer'
 	]
 };
 

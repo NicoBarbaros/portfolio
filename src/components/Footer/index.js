@@ -13,20 +13,18 @@ class Footer extends Component {
 		super(props);
 	}
 
-
 	render () {
-		const { location } = this.props;
+			const { location } = this.props;
 
-		return (
-			<footer className={style.footer}>
-				{location.pathname === '/' &&
-					<p>Enjoy {getUniqueWord()} {weekDay()}</p>
-				}
-				<Links links={links}/>
-
-			</footer>
-		)
-	}
+			return (
+					<footer className={style.footer}>
+							{location.pathname === '/' &&
+							<p>Enjoy {getUniqueWord()} {weekDay()}</p>
+							}
+						 <Links links={links}/>
+				</footer>
+			)
+		}
 }
 
 //

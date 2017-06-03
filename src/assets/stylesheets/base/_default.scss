@@ -1,9 +1,8 @@
 html,
 body {
-  background: #fff;
   color: #343434;
   font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px/1.2;
+  font-size: 16px;
   overflow-x: hidden !important;
 }
 
@@ -32,3 +31,6 @@ textarea {
   resize: vertical;
 }
 
+img {
+  width: 100%;
+}

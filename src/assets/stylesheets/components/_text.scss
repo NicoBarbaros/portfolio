@@ -1,0 +1,20 @@
+.text {
+  @include font--source($size: em(60, 30), $weight: 800 );
+
+  &.textParagraph:not(:last-of-type) {
+    @include margin--mixin($bottom: rem($paragraph-margin));
+  }
+
+  em {
+    display: block;
+    line-height: 1.1;
+
+    @include margin--mixin($top: rem(8));
+    @include font--source($size: em(24, 60), $weight: 300 );
+    font-family: 'Space Mono', monospace;
+  }
+  
+  strong {
+    color: $accent-color;
+  }
+}

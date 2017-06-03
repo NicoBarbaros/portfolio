@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 
-import style from './style.css';
+import style from '../../assets/stylesheets/base.scss';
 
 
 class Navigation extends Component {
 	render () {
 		return (
-			<nav ref="nav" id="nav">
-				<ul className='nav'>
+			<nav ref="nav" className={style.nav}>
+				<ul>
 					<li>
 						<NavLink activeClassName={style.active} to='/about' >
 							About

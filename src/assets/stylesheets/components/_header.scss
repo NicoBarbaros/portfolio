@@ -1,0 +1,82 @@
+header {
+  top: 60px;
+  z-index: z('site-header');
+  @include cf;
+
+  margin-top: calc(10vh - 20px);
+}
+
+.logoWrapper {
+  @include padding--mixin($bottom: 50px);
+}
+
+.logo {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: em(32, 16);
+  line-height: 1;
+  color: $accent-color;
+  display: inline-block;
+}
+
+.logoLink {
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.8;
+  overflow: hidden;
+
+  span {
+    &:first-of-type {
+      color: $accent-color;
+    }
+
+    &:last-of-type {
+      color: #fff;
+    }
+  }
+  
+  span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      line-height: 0.8;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+    }
+  }
+
+  &:hover {
+    span:first-of-type {
+      color: #fff;
+    }
+
+    span:last-of-type {
+      color: $accent-color;
+    }
+  }
+}
+
+.logoLink span:last-of-type::before {
+  background: $accent-color;
+}
+
+.logoLink:hover span:last-of-type::before,
+.logoLink span:first-of-type::before {
+  -webkit-transform: translate3d(0,-150%,0);
+  transform: translate3d(0,-150%,0);
+}
+
+.logoLink:hover span:first-of-type::before,
+.logoLink span:last-of-type::before {
+  -webkit-transform: translate3d(0, 150%, 0);
+  transform: translate3d(0, 150%, 0);
+}

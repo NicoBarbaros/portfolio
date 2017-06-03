@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import style from './style.css';
+
+import style from '../../assets/stylesheets/base.scss';
 
 class Title extends Component {
 
 	render () {
-		const content = this.props;
-		let subtitle = null;
+			const content = this.props
 
-		subtitle = <h2 className={style.subtitle}><span className={style.subtitleText}>{content.words}</span></h2>
+			let subtitleWords = content.words.map((word, index) => <span key={'word-'+index} class={style.subtitleText}>{word}</span>)
+
+			let subtitle = <h2 class={style.subtitle}>{subtitleWords}</h2>
 
 		return (
-			<section>
-				<h1 className={style.title}><span className={style.titleText}>{content.title}</span></h1>
+			<section class={style.mainContainer}>
+				<h1 class={style.title}>{content.title}</h1>
 				{subtitle}
 			</section>
 		)
